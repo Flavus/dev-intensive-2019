@@ -33,6 +33,10 @@ object Utils {
     }
 
     fun toInitials(firstName: String?, lastName: String?): String? {
-        return firstName?.get(0).toString().plus((lastName?.get(0) ?: "" ).toString())
+        var res : String? = ""
+        if (firstName != "") res = (firstName?.get(0) ?: "").toString().toUpperCase()
+        if (lastName != "") res += (lastName?.get(0) ?: "").toString().toUpperCase()
+        if (res == "" || res == " ") res = null
+        return res
     }
 }
