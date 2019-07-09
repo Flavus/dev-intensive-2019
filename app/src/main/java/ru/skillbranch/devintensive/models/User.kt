@@ -90,7 +90,7 @@ data class User(
         var respect : Int = 0
             private set
 
-        var lastVisit : Date? = Date()
+        var lastVisit : Date = Date()
             private set
 
         var isOnline : Boolean = false
